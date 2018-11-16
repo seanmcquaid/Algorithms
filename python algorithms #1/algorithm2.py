@@ -4,16 +4,19 @@
 
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
+# WE KNOW THE 1 and 1 ARE THE FIRST TWO NUMBERS OF THE FIB SEQ
+
 fib1 = 1 
 fib2 = 1 
+
 sum_total = 0
 user_answer = int(raw_input("What's your max? "))
 
-for num in range (user_answer):
+for num in range (0,user_answer):
     if(fib1 % 2 == 0):
         sum_total += fib1
-    temp = fib1 + fib2
-    fib1 = fib2
-    fib2 = temp
+    temp = fib1 + fib2 # stash the new value in temp
+    fib1 = fib2 # old 2 is now the new 1
+    fib2 = temp # temp is the new 2
     
 print sum_total

@@ -11,3 +11,19 @@ for i in range (0, user_number):
         sum += i
 
 print sum
+
+# FIZZBUZZ
+# Print all integers from 1-100
+# If the number is divisible by 3, print fizz instead of the number
+# If the number is divisible by 5, print buzz instead of the number
+# If the number is divisible by 15, print fizzbuzz instead of the number
+
+for i in range (0,100):
+        if (i% 15 == 0):
+                print "Fizzbuzz"
+        elif (i % 3 == 0):
+                print "Fizz"
+        elif (i % 5 == 0):
+                print "Buzz"
+        else:
+                print i
