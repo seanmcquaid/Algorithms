@@ -12,7 +12,5 @@ for i in range (2,user_num):
     if (user_num % i == 0):
         prime_factors.append(i)
         user_num = (user_num / i)
-    elif (i == user_num):
-        break
 
 print prime_factors
