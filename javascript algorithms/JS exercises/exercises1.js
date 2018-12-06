@@ -40,18 +40,37 @@ numOfDays(monthNum, yearNum)
 // 3. Given the amount of a bill as a number, and a level of service - which can be "good", "fair", or "bad", 
 // print the total bill with the tip included. The amount of tip given for each level of service is defined by:
 
- 
 // "good" -> 20%
 
 // "fail" -> 15%
 
 // "bad"  -> 10%
 
- 
 // Extra: Add to "Tip Calculator"...you are also given the number of people to divide the total into. 
 // Print the amount for each person to pay.
 
- 
-
 // Convert it to a function splitAmount that takes the bill amount and the level of service, 
 // and the number of people to split the bill between. Return the final amount for each person.
+
+function tipCalc(total, service, amountOfPeople){
+    var tipAmount;
+    var newTotal;
+    if (service == "good"){
+        tipAmount = Math.floor((total * 0.2) * 100) / 100;
+        newTotal = total + tipAmount;
+        costPerPerson = newTotal / amountOfPeople;
+        console.log ("Cost Per Person: $" + costPerPerson)
+    } else if (service == "fair"){
+        tipAmount = Math.floor((total * 0.15) * 100) / 100;
+        newTotal = total + tipAmount;
+        costPerPerson = newTotal / amountOfPeople;
+        console.log ("Cost Per Person: $" + costPerPerson)
+    } else {
+        tipAmount = Math.floor((total * 0.10) * 100) / 100;
+        newTotal = total + tipAmount;
+        costPerPerson = newTotal / amountOfPeople;
+        console.log ("Cost Per Person: $" + costPerPerson)
+    }
+}
+
+tipCalc(100,"good", 2)
