@@ -7,7 +7,7 @@
 var number = parseInt(prompt("Type in a number between 0 and 6!"));
 var daysOfWeek = [0,1,2,3,4,5,6];
 
-if (daysOfWeek[number] == 5 || daysOfWeek[number] == 6){
+if (daysOfWeek[number] >= 5){
     console.log("Sleep in.")
 } else {
     console.log("Go to work!")
