@@ -28,18 +28,47 @@ initials(fullName);
 
 var zeroOnes = [0, 1, 0, 1, 1, 1, 0, 0];
 
-var lastOne = zeroOnes.lastIndexOf(1);
+function lastOne(){
+    var foundIndex;
+    for (i = 0; i < zeroOnes.length; i++){
+        var currentItem = zeroOnes[i];
+        if(currentItem == 1){
+            foundIndex = i;
+        }
+    }
+    console.log(foundIndex);
+}
 
-console.log(lastOne);
+lastOne(zeroOnes);
 
-// Could have used a for loop to search for each one in the array then return the largest index?
+// can also be accomplished with lastIndexOf method
+
+// var lastOne = zeroOnes.lastIndexOf(1);
+
+// console.log(lastOne);
+
 
 // Given a list of positive numbers, [1, 5, 25, 3, 99, 20], write a function that returns the biggest number
 var positiveNumbers = [1, 5, 25, 3, 99, 20];
 
 function biggestNumber(){
-    var sortedNumbers = positiveNumbers.sort()
-    console.log(sortedNumbers[(sortedNumbers.length)-1])
+    var largestNumber = 0;
+    for (i = 0; i < positiveNumbers.length; i++){
+        var currentItem = positiveNumbers[i];
+        if (currentItem > largestNumber){
+            largestNumber = currentItem;
+        }
+    }
+    console.log(largestNumber);
 }
 
 biggestNumber(positiveNumbers);
+
+// Can utilize sort method to get answer as well
+
+// function biggestNumber(){
+//     var sortedNumbers = positiveNumbers.sort()
+//     console.log(sortedNumbers[(sortedNumbers.length)-1])
+// }
+
+// biggestNumber(positiveNumbers);
