@@ -198,3 +198,16 @@ function pointsPerMinutePlayed(){
 
 pointsPerMinutePlayed(players);
 // * Based on this data, what is the average points score for the team as a whole?
+
+function teamPointsPerMinute(){
+  var teamPoints = 0;
+  var teamAvgMinutes = 0;
+  var average = 0;
+  for(i=0; i<players.length; i++){
+    teamPoints += players[i].avgPoints;
+    teamAvgMinutes += players[i].avgMinutesPlayed;
+    average = teamPoints / teamAvgMinutes
+  } console.log(average);
+}
+
+teamPointsPerMinute(players);
