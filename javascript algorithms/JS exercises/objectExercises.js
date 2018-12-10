@@ -42,13 +42,18 @@ letterFrequency(randomString);
 
 var olympicResults = [
     {country: "usa", running: 200, swimming: 250, extremeUnderWaterBasketWeaving: 10}, 
-    {country: "canada", running: 200, swimming: 250, extremeUnderWaterBasketWeaving: 10},
+    {country: "canada", running: 300, swimming: 10, extremeUnderWaterBasketWeaving: 100},
 ];
 
 function bestTime(){
-    
-}
-
+    var timeToBeat = 1000;
+    for(i=0; i < olympicResults.length; i++){
+        var runningTime = olympicResults[i].running;
+        var swimmingTime = olympicResults[i].swimming;
+        var extremeUnderWaterBasketWeavingTime = olympicResults[i].extremeUnderWaterBasketWeaving;
+        }
+    } 
+bestTime(olympicResults);
 // Given a list of numbers, [-1, 5, -25, -3, 99, 20], write a function that returns 
 // the count of positive numbers and negative numbers
 
