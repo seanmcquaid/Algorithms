@@ -109,19 +109,58 @@ var players = [
     starter: false
   }
 ];
-var avgOfAvgMinutes = 0;
-for(i=0; i<players.length; i++){
-  avgOfAvgMinutes += players[i].avgMinutesPlayed;
-  console.log(players[i].avgMinutesPlayed);
-}
-avgOfAvgMinutes/players.length;
 
 
 // * Print the average playing time of the players.
+function averagePlayingTime(){
+  var avgOfAvgMinutes = 0;
+  for(i=0; i<players.length; i++){
+    avgOfAvgMinutes += players[i].avgMinutesPlayed;
+  } console.log(avgOfAvgMinutes/players.length);
+}
+averagePlayingTime(players);
 // * Print the average playing time of the starters.
+
+function starterAveragePlayingTime(){
+  var avgOfAvgMinutes = 0;
+  var starterCount = 0;
+  for(i=0; i<players.length; i++){
+    if (players[i].starter == true){
+      avgOfAvgMinutes += players[i].avgMinutesPlayed;
+      starterCount += 1;
+    }
+  } console.log(avgOfAvgMinutes/starterCount);
+}
+
+starterAveragePlayingTime(players);
 // * Print the average playing time of the bench players.
+function benchAveragePlayingTime(){
+  var avgOfAvgMinutes = 0;
+  var benchCount = 0;
+  for(i=0; i<players.length; i++){
+    if (players[i].starter == false){
+      avgOfAvgMinutes += players[i].avgMinutesPlayed;
+      benchCount += 1;
+    }
+  } console.log(avgOfAvgMinutes/benchCount);
+}
+
+benchAveragePlayingTime(players)
+
 // * Create an array of the names of each player.
+
+function playerNames(){
+  var names = [];
+  for(i=0; i<players.length; i++){
+    names.push(players[i].name);
+  } console.log(names);
+}
+
+playerNames(players);
 // * Create an array of the names of the players who average more than 10 points per game.
+
+
+
 // * Create an array of the names of the players who average more than 5 rebounds per game.
 // * Who is the player with the most points per minute played? Write a program to find that out.
 // * Based on this data, what is the average points score for the team as a whole?
