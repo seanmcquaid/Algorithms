@@ -40,5 +40,25 @@ letterFrequency(randomString);
 // Given an array of olympic race results [{country: “usa”, time: 233}, {country: “poland”, time: 222}, … ],
 //  write a function that returns each country’s best time
 
+var olympicResults = [{country: "usa", time: 200}, {}]
 
-// Given a list of numbers, [-1, 5, -25, -3, 99, 20], write a function that returns the count of positive numbers and negative numbers
+// Given a list of numbers, [-1, 5, -25, -3, 99, 20], write a function that returns 
+// the count of positive numbers and negative numbers
+
+var numbers = [-1, 5, -25, -3, 99, 20];
+
+function numberCount(){
+    var positiveCount = 0;
+    var negativeCount = 0;
+    for(i = 0; i < numbers.length; i++){
+        var currentNumber = numbers[i];
+        if (currentNumber > 0){
+            positiveCount += 1;
+        } else {
+            negativeCount +=1;
+        }
+    } console.log("You have " +positiveCount + " positive numbers!");
+    console.log("You have " +negativeCount + " negative numbers!");
+}
+
+numberCount(numbers);
