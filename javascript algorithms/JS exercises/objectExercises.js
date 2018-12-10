@@ -3,14 +3,20 @@ var array = [1991, 1984, 1984, 1989];
 
 function commonYear(){
     var object =  {};
+    var keyFrequency = 0;
+    var mostCommonYear;
     for( i = 0; i < array.length; i++){
         var currentItem = array[i];
         if(!object[currentItem]){
             object[currentItem] = 0;
         }
         object[currentItem] += 1;
+        if(object[currentItem] > keyFrequency){
+            keyFrequency = object[currentItem];
+            mostCommonYear = array[i];
+        }
     }
-    console.log(object);
+    console.log(mostCommonYear);
 }
 
 commonYear(array);
