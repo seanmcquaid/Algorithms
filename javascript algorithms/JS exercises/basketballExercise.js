@@ -159,8 +159,42 @@ function playerNames(){
 playerNames(players);
 // * Create an array of the names of the players who average more than 10 points per game.
 
+function tenPointPlayerNames(){
+  var names = [];
+  for(i=0; i<players.length; i++){
+    if(players[i].avgPoints > 10){
+      names.push(players[i].name);
+    }
+  } console.log(names);
+}
 
+tenPointPlayerNames(players);
 
 // * Create an array of the names of the players who average more than 5 rebounds per game.
+function reboundPlayerNames(){
+  var names = [];
+  for(i=0; i<players.length; i++){
+    if(players[i].avgRebounds > 5){
+      names.push(players[i].name);
+    }
+  } console.log(names);
+}
+
+reboundPlayerNames(players);
+
 // * Who is the player with the most points per minute played? Write a program to find that out.
+
+function pointsPerMinutePlayed(){
+  var bestPlayer = "";
+  var pointsToBeat = -1;
+  for(i=0; i<players.length; i++){
+    var pointsPerMinute = players[i].avgPoints / players[i].avgMinutesPlayed;
+    if (pointsPerMinute > pointsToBeat){
+      pointsToBeat = pointsPerMinute;
+      bestPlayer = players[i].name;
+    }
+  } console.log(bestPlayer);
+}
+
+pointsPerMinutePlayed(players);
 // * Based on this data, what is the average points score for the team as a whole?
