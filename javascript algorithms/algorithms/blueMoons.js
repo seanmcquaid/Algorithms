@@ -14,3 +14,5 @@
 // If you want to be really, really specific, the lunar month varies depending
 // on the shape of the sun and moons orbit. The average is  29 days, 12 hours, and 44 minutes.
 
+var startDate = new Date("January, 1, 2000");
+var endDate = new Date("December, 31, 2099");
