@@ -3,12 +3,22 @@
 
 // How many such routes are there through a 20×20 grid?
 
-const grid = 2;
-var path = 1;
-
-for (i = 0; i < grid; i++) {
-   path *= (2* grid) - i;
-   path /= i + 1;
+function findRoutes(gridSize){
+   let routeMatrix = [];
+   for(let i = 1; i <= gridSize; i++){
+      routeMatrix.push(1);
+   }
+   for(let i = 1; i <= gridSize; i++){
+      for(let j = 1; j < gridSize; j++){
+         routeMatrix[j] = routeMatrix[j] + routeMatrix[j-1];
+      }
+      routeMatrix[i] = 2 * routeMatrix[i-1];
+   }
+   console.log(routeMatrix);
+   return routeMatrix[gridSize];
 }
 
-console.log(path);
+gridSize = 4;
+
+n = findRoutes(gridSize);
+console.log(n);
