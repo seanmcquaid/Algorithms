@@ -16,3 +16,17 @@
 
 var startDate = new Date("January, 1, 2000");
 var endDate = new Date("December, 31, 2099");
+
+// Blue moon occurs on the 2ND FULL MOON OF A MONTH
+
+// function blueMoonCalc(startDate, endDate){
+//     let fullMoonCount = 0;
+//     while (startDate < endDate){
+//         startDate.setDate((startDate.getDate()+ 1));
+//         if () {
+//             fullMoonCount ++;
+//         }
+//     } console.log(fullMoonCount);
+// }
+
+// blueMoonCalc(startDate, endDate);
