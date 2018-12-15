@@ -14,7 +14,6 @@ for(let i = 100; i < 999; i++){
     } 
 }
 
-
 function findPalindrome(product){
     let reversedProduct= product.split("").reverse().join("");
     if (product === reversedProduct){
