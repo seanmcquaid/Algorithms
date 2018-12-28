@@ -14,8 +14,7 @@ function factorialDigitSum(testNumber){
     for(let i = testNumber; i > 0; i--){
         result *= i;
     }
-    console.log(result);
-    let stringedResult = result.toString();
+    let stringedResult = BigInt(result).toString();
     for(let i = 0; i < stringedResult.length; i++){
         testArray.push(stringedResult[i]);
     }
