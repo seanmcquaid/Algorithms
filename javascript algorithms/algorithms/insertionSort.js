@@ -1,19 +1,13 @@
 let array = [5,2,6,1,4,3];
-let sorted = false;
 
-while(sorted === false){
-    let count = 0;
-    for(i = 0; i < array.length; i++){
-        if(array[i] > array[i+1]){
-            let stash = array[i];
-            array[i] = array[i+1];
-            array[i+1] = stash;
-            sorted = false;
-            count++;
-        }
+for (let i = 0; i < unsorted.length; i++){
+    let first = unsorted[i]
+    let j = i - 1
+    while (j >= 0 && unsorted[j] > first){
+        unsorted[j + 1] = unsorted[j]
+        j--
     }
-    if(count == 0){
-        sorted = true;
-    }
+    unsorted[j + 1] = first
+    console.log(unsorted)
+        
 }
-console.log(array);
