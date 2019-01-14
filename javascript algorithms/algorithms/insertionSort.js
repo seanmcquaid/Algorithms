@@ -1,5 +1,5 @@
-let array = [5,2,6,1,4,3];
-
+let numList = [5,2,6,1,4,3];
+let sorted = false;
 for (let i = 0; i < unsorted.length; i++){
     let first = unsorted[i]
     let j = i - 1
@@ -9,5 +9,4 @@ for (let i = 0; i < unsorted.length; i++){
     }
     unsorted[j + 1] = first
     console.log(unsorted)
-        
 }
