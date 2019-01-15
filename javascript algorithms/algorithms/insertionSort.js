@@ -4,8 +4,9 @@ for (let i = 1; i < numList.length; i++){
     let previousNumIndex = i - 1
     while (previousNumIndex >= 0 && numList[previousNumIndex] > firstNum){
         numList[previousNumIndex + 1] = numList[previousNumIndex];
-        secondNumIndex--;
+        previousNumIndex--;
+        console.log(numList);
     }
-    numList[secondNumIndex + 1] = firstNum;
+    numList[previousNumIndex + 1] = firstNum;
 }
 console.log(numList)
