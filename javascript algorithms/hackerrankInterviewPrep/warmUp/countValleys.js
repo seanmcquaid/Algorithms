@@ -1,23 +1,27 @@
-let numberOfSteps = 10;
-let path = "DDUDDUUDUU";
+let path = "DUDDDUUDUU";
+let pathArray = path.split("")
+let numberOfSteps = pathArray.length;
 
 function countingValleys(num, string) {
-    let valleyCount = 0; 
-    let multipleDCount = 0;
-    let stringArray =string.split("")
-    for(let i = 0; i < stringArray.length; i++){
-        if(stringArray[i] === "D"){
-            multipleDCount++;
-        } else if (stringArray[i] === "U"){
-            if(multipleDCount > 1){
-                multipleDCount = 0;
-                valleyCount++;
-            } else if (multipleDCount = 1){
-                multipleDCount = 0;
+    let pathArray = string.split("")
+    let numberOfSteps = pathArray.length;
+    while (numberOfSteps > 0) {
+        let valleyCount = 0; 
+        let seaLevel = 0; 
+        for(let i = 0; i < pathArray.length; i++){
+            if(pathArray[i] == "D"){
+                seaLevel--;
+                numberOfSteps--;
+            } else if (pathArray[i] == "U"){
+                seaLevel++;
+                numberOfSteps--;
+                if(seaLevel == 0){
+                    valleyCount++;
+                }
             }
         }
+        return(valleyCount);
     }
-    console.log(valleyCount);
 }
 
 countingValleys(numberOfSteps, path);
