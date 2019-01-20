@@ -1,26 +1,28 @@
-let numberOfChar = 1000000000000;
-let string ="a";
+let numberOfChar = 882787;
+let string = "aab";
+
 
 function repeatedString(s, n) {
-    let stringSplit = string.split("");
-    let charArray = [];
-    let count = 0;
+    let remainder = n % s.length;
+    let dividedNumber = Math.floor(n / s.length);
+    let initialStringACount = 0;
+    let aCountRemainder = 0;
 
-    while(charArray.length < numberOfChar){
-        for(let i = 0; i < stringSplit.length; i++){
-            charArray.push(stringSplit[i]);
-            if(charArray.length === numberOfChar){
-                break
-            }
+    for(let i = 0; i < s.length; i++){
+        if(s[i] === "a"){
+            initialStringACount++;
         }
     }
 
-    for(let i = 0; i < charArray.length; i++){
-        if(charArray[i] == "a"){
-            count++;
+    for(let i = 0; i < remainder; i++){
+        if(s[i] === "a"){
+            aCountRemainder++;
         }
     }
-    return count;
+
+    let totalACount = (initialStringACount * dividedNumber) + aCountRemainder;
+    console.log(totalACount); 
 }
 
-repeatedString(string, numberOfChar);
+
+repeatedString(string, numberOfChar)
