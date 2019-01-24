@@ -19,7 +19,7 @@ function jumpingOnClouds(c) {
             stepCount++;
         }
     }
-    return stepCount;
+    console.log(stepCount);
 }
 
 jumpingOnClouds(binaryArray);
