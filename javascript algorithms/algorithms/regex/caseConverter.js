@@ -6,12 +6,12 @@ function caseConvertor(string,testCase){
     let newString = lowerString.replace(/\s+/g, " ");
     console.log(newString)
     if(testCase == "camelcase"){
-        let upperCaseSearch = newString.match(/\s./g);
-        let empty;
-        let upperCasedString = upperCaseSearch.map((element)=>{
-            empty = newString.replace(element, element.toUpperCase());
-        });
-        console.log(empty)
+        let empty =[];
+        let upperCasedString = newString.replace(/\s./g, (firstLetter)=>((firstLetter.toUpperCase())));
+        let camelString = upperCasedString.replace(/\s/g, "");
+        console.log(camelString);
+        // let camelString = stringArray.join(" ");
+        // console.log(camelString);
     } else if(testCase == "snakecase"){
       let snakeString = newString.replace(/\s/g, "_");
       console.log(snakeString)
