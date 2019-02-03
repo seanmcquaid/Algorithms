@@ -12,6 +12,7 @@
 // i = array for lines
 // j = array of integers for that line
 
+// hour glass format
 // a b c
 //   d
 // e f g
