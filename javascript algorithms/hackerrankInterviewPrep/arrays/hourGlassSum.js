@@ -1,0 +1,43 @@
+// 6 * 6 grid 
+
+// 16 hourglasses
+
+// example grid: 
+// 1 1 1 0 0 0 
+// 0 1 0 0 0 0
+// 1 1 1 0 0 0
+// 0 0 0 0 0 0
+// 0 0 0 0 0 0
+// 0 0 0 0 0 0
+// i = array for lines
+// j = array of integers for that line
+
+// a b c
+//   d
+// e f g
+
+let array = [
+    [-9,-9,-9,1,1,1],
+    [0,-9,0,4,3,2],
+    [-9,-9,-9,1,2,3],
+    [0,0,8,6,6,0],
+    [0,0,0,-2,0,0],
+    [0,0,1,2,4,0]
+]
+
+// example values of the 16 hour glasses
+// -63, -34, -9, 12, 
+// -10, 0, 28, 23, 
+// -27, -11, -2, 10, 
+// 9, 17, 25, 18
+
+function hourglassSum(arr) {
+    for(let i = 0; i < array.length; i++){
+        console.log(array[i]);
+        for(let j = 0; j < array[i].length; j++){
+            console.log(array[i][j])
+        }
+    }
+}
+
+hourglassSum(array);
