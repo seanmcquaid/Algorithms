@@ -32,15 +32,17 @@ let array = [
 // -27, -11, -2, 10, 
 // 9, 17, 25, 18
 
-function hourglassSum(array) {
-    let biggestHourGlass = 0;
-    let i = 0;
-    let j = 0;
-    let hourGlass = array[i][j] + array[i][j+1] + array[i][j+1] + array[i+1][j+1] + array[i+2][j] + array[i+2][j+1] + array[i+2][j+2];
-    if(hourGlass > biggestHourGlass){
-        biggestHourGlass = hourGlass;
+function hourglassSum(arr) {
+    let biggestHourGlass = -82;
+    for(let i = 0; i < 4; i++){
+        for(let j = 0; j < 4; j++){
+            let hourGlass = arr[i][j] + arr[i][j+1] + arr[i][j+2] + arr[i+1][j+1] + arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2];
+            if(hourGlass > biggestHourGlass){
+                biggestHourGlass = hourGlass;
+            }
+        }
     }
-    console.log(biggestHourGlass);
+    return(biggestHourGlass);
 }
 
 hourglassSum(array);
