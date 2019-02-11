@@ -6,7 +6,6 @@ function caseConvertor(string,testCase){
     let newString = lowerString.replace(/\s+/g, " ");
     console.log(newString)
     if(testCase == "camelcase"){
-        let empty =[];
         let upperCasedString = newString.replace(/\s./g, (firstLetter)=>((firstLetter.toUpperCase())));
         let camelString = upperCasedString.replace(/\s/g, "");
         console.log(camelString);
