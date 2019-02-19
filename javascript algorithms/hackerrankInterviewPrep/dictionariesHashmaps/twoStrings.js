@@ -2,18 +2,20 @@ let str1 = "hello";
 let str2 = "world"
 
 function twoStrings(s1, s2) {
-    let substring = false;
-    for(let i = 0; i < s1.length; i++){
-        let regexCheck = RegExp(`[${str1[i]}]+`)
-        let match = regexCheck.test(s2)
-        if( match == true){
+    let alpha = "abcdefghijklmnopqrstuvwxyz";
+    let subtring = false;
+    for(let i = 0 ; i < alpha.length; i++){
+        let regexCheck = RegExp(`[${alpha[i]}]+`)
+        let match1 = regexCheck.test(s1);
+        let match2 = regexCheck.test(s2);
+        if(match1 == true && match2 == true){
             substring = true;
-            return("YES")
         }
-        
     }
-    if(substring == false) {
-        return("NO")
+    if(substring == true){
+        console.log("YES")
+    } else {
+        console.log("NO")
     }
 }
 
