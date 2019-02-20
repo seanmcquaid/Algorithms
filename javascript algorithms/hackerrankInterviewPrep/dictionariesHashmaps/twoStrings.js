@@ -3,7 +3,7 @@ let str2 = "world"
 
 function twoStrings(s1, s2) {
     let alpha = "abcdefghijklmnopqrstuvwxyz";
-    let subtring = false;
+    let substring = false;
     for(let i = 0 ; i < alpha.length; i++){
         let regexCheck = RegExp(`[${alpha[i]}]+`)
         let match1 = regexCheck.test(s1);
