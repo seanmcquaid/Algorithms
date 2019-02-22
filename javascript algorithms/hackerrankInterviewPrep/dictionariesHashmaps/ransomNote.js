@@ -6,11 +6,12 @@ function checkMagazine(magazine, note) {
     let noteMap = new Map();
     let count = 0;
     for(let i = 0; i < magazine.length; i++){
-        magazineMap.set(i, magazine[i])
+        magazineMap.set(magazine[i], 1)
     }
     for(let i = 0; i < note.length; i++){
-        noteMap.set(i, note[i])
+        noteMap.set(note[i], 1)
     }
+    
     for(let key of noteMap.keys()){
         let noteWord = noteMap.get(key)
         let regexCheck = new RegExp (noteWord)
