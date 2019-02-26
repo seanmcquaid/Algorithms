@@ -1,0 +1,72 @@
+body {
+    font-family: 'Righteous', cursive;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+.clock-container {
+    font-size: 8rem;
+    width: 100%;
+    max-width: 38rem;
+    border: 4px solid black;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.button-container div{
+    margin: 1rem;
+    display: inline-block;
+}
+
+.start-btn, .stop-btn, .reset-btn {
+    width: 100%;
+    max-width: 11rem;
+    font-size: 3rem;
+    font-family: 'Righteous', cursive;
+    border-radius: 6px;
+}
+
+.start-btn{
+    background-color: #17a02d;
+}
+
+.stop-btn {
+    background-color: rgb(128, 0, 0);
+    color: white;
+}
+
+.reset-btn {
+    background-color: rgb(25, 25, 218);
+    color: white;
+}
+
+@media only screen and (max-width: 650px){
+    h1 {
+        font-size: 3rem;
+    }
+    .clock-container{
+        max-width: 13rem;
+        font-size:1.5rem;
+        height: 3rem;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .start-btn, .stop-btn, .reset-btn {
+        max-width: 8rem;
+        font-size: 2rem;
+    }
+}
