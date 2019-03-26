@@ -37,11 +37,11 @@ function addUpTo(n){
 // an algorithm is O(f(n)) if the number of simple operations the computer
 // has to do is eventually less than a constant times f(n) as n increases
 
-// linear = f(n) = n
+// linear = f(n) = n = number of operations is always bounded by a multiple of n = O(n)
 
-// quadatric = f(n) = n ^ 2
+// quadatric = f(n) = n ^ 2 = nested loops = O(n * n) = 0(n^2)
 
-// constant = f(n) = 1;
+// constant = f(n) = 1; - always a certain amount of operations so O(1)
 
 // could be different but this is the most basic def
 
