@@ -64,3 +64,12 @@ function addUpTo(n){
 // 2) Strings require O(n) space where n is the string length
 // 3) References types are generally O(n), where n is the length (for arrays) or the number of keys(for objects)
 
+// logarithms
+// definition: inverse of exponents
+// the log of a number roughly measures by the number of times you can divide that number 2 before you get a value
+// that's less than or equal to one
+// O(log n) complexity is GREAT, it's right above constant
+
+// searching algs have log complexity
+// sorting algs have log complexity
+// recursion involves log complexity
