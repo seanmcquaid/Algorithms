@@ -3,25 +3,50 @@
 // ie. cinema = iceman
 // return true or false
 
-function validAnagram(str1, str2){
-    if(str1.length !== str2.length){
-        return false
-    }
-    let freq1 = {};
-    let freq2 = {};
-    for(let char of str1){
-        freq1[char] = (freq1[char] || 0) + 1;
-    }
-    for(let char of str2){
-        freq2[char] = (freq2[char] || 0) + 1;
+// function validAnagram(str1, str2){
+//     if(str1.length !== str2.length){
+//         return false
+//     }
+//     let freq1 = {};
+//     let freq2 = {};
+//     for(let char of str1){
+//         freq1[char] = (freq1[char] || 0) + 1;
+//     }
+//     for(let char of str2){
+//         freq2[char] = (freq2[char] || 0) + 1;
+//     }
+
+//     for(let key in freq1){
+//         if(!(key in freq2)){
+//             return false
+//         }
+//         if(freq1[key] !== freq2[key]){
+//             return false
+//         }
+//     }
+//     return true
+// }
+
+// colt's solution
+
+function validAnagram(first, second){
+    if(first.length !== second.length){
+        return false;
     }
 
-    for(let key in freq1){
-        if(!(key in freq2)){
+    const lookup = {};
+
+    for(let i = 0; i < first.length; i++){
+        let letter = first[i];
+        lookup[letter] ? lookup[letter] += 1 : lookup[letter] = 1;
+    }
+
+    for(let i = 0; i < second.length; i++){
+        let letter = second[i];
+        if(!lookup[letter]){
             return false
-        }
-        if(freq1[key] !== freq2[key]){
-            return false
+        } else {
+            lookup[letter] -= 1;
         }
     }
     return true
