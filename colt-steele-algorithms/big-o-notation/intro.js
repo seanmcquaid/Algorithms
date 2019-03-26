@@ -46,3 +46,12 @@ function addUpTo(n){
 // could be different but this is the most basic def
 
 
+// rules of thumb for big O:
+// 1) Constants don't matter - 
+// O(2n) > O(n)
+// O(500) > O(1)
+// O(13 n ^ 2) > O(n^2)
+// 2) arithmetic operations are constant
+// 3) variable assignment is constant
+// 4) accessing elements in an array or an object by key is also constant
+// 5) in a loop, the complexity is the length of the loop times the complexity of whatever happens inside the loop
