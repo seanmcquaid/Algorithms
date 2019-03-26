@@ -55,3 +55,12 @@ function addUpTo(n){
 // 3) variable assignment is constant
 // 4) accessing elements in an array or an object by key is also constant
 // 5) in a loop, the complexity is the length of the loop times the complexity of whatever happens inside the loop
+
+// space complexity - amount of memory taken up
+// does not include space taken up by inputs
+
+// rules of thumb
+// 1) Most primitives (booleans,numbers,undefined,null) are constant space
+// 2) Strings require O(n) space where n is the string length
+// 3) References types are generally O(n), where n is the length (for arrays) or the number of keys(for objects)
+
