@@ -7,17 +7,32 @@
 
 // frequency counter
 
-function areThereDuplicates(){
-    // console.log(arguments)
-    let counter = {};
-    for (let i = 0; i < arguments.length; i++){
-        let argument = arguments[i];
-        counter[argument] = (counter[argument] || 0) + 1;
-    }
-    for(let key in counter){
-        if(counter[key] > 1){
+// function areThereDuplicates(){
+//     // console.log(arguments)
+//     let counter = {};
+//     for (let i = 0; i < arguments.length; i++){
+//         let argument = arguments[i];
+//         counter[argument] = (counter[argument] || 0) + 1;
+//     }
+//     for(let key in counter){
+//         if(counter[key] > 1){
+//             return true
+//         }
+//     }
+//     return false
+// }
+
+// multiple pointers
+
+function areThereDuplicates(...args){
+    let start = 0;
+    let next = 1;
+    while(next < args.length){
+        if(args[start] === args[next]){
             return true
         }
+        start++;
+        next++;
     }
     return false
 }
