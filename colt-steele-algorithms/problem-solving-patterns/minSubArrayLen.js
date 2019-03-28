@@ -15,14 +15,20 @@ function minSubArrayLen(array,sum){
     let minLen = Infinity;
 
     while (start < array.length){
+        // if current window doesn't add up to the given sum then move the window to the right
         if(total < sum && end < array.length){
             total += array[end];
             end++;
-        }else if(total >= sum){
+        }
+        // if current window adds up to at least the sum given, then we can shrink the window
+        else if(total >= sum){
             minLen = Math.min(minLen, (end-start))
             total -= array[start];
             start++;
-        }else{
+        }
+        // current total less than required but we reach the end, so we need to break this
+        // otherwise, it'd be infinite
+        else{
             break
         }
         return minLen === Infinity ? 0 : minLen;
