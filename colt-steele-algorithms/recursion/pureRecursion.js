@@ -16,3 +16,7 @@ function collectOddValues(arr){
 let array = [1,2,3,5];
 
 console.log(collectOddValues(array))
+
+// tips!
+
+// for arrays, use methods like slice, the spread operator and concat that make copies of arrays so you do not mutate them
