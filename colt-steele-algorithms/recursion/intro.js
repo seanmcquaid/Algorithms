@@ -23,3 +23,10 @@
 // why do I care?
 // You're used to function being pushed on the call stack and popped off when they are done
 // when we write recursive functions,we keep pushing new functions onto the call stack! (the same function)
+
+// where things go wrong
+
+// no base case
+// no different input
+// no return statement
+// stack overflow - maximum call size exceeded
