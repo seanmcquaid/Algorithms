@@ -6,12 +6,28 @@
 // function. If there isn't one, return 0 instead
 
 const array = [2,3,1,2,4,3];
-const num = 7
+const sum = 7
 
-function minSubArrayLen(array,num){
-    for(let i = 0; i < array.length; i++){
-        
+function minSubArrayLen(array,sum){
+    let total = 0;
+    let start = 0;
+    let end = 0;
+    let minLen = Infinity;
+
+    while (start < array.length){
+        if(total < sum && end < array.length){
+            total += array[end];
+            end++;
+        }else if(total >= sum){
+            minLen = Math.min(minLen, (end-start))
+            total -= array[start];
+            start++;
+        }else{
+            break
+        }
+        return minLen === Infinity ? 0 : minLen;
     }
+
 }
 
-minSubArrayLen(array,num)
+minSubArrayLen(array,sum)
