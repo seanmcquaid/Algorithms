@@ -31,9 +31,9 @@ function minSubArrayLen(array,sum){
         else{
             break
         }
-        return minLen === Infinity ? 0 : minLen;
     }
+    return minLen === Infinity ? 0 : minLen;
 
 }
 
-minSubArrayLen(array,sum)
+console.log(minSubArrayLen(array,sum))
