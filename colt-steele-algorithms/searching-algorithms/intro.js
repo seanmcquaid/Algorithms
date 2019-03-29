@@ -60,6 +60,8 @@ let array2 = [1,3,4,6,8,9,11,12,15,16,17,18,19];
 // if the value is too large, move the right point down
 // if you never find the value, return -1
 
+// my attempted solution
+
 function binarySearch(array, value){
     let leftPointer = 0;
     let rightPointer = array.length - 1;
