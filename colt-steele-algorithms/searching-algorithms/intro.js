@@ -34,4 +34,46 @@ function linearSearch(array,value){
     return -1
 }
 
-console.log(linearSearch(array,12))
+// console.log(linearSearch(array,12))
+
+// binary search
+
+// significant improvement on libear search
+// much much faster!
+// rather than eliminating one element at a time you can eliminate HALF of the remaining elemnts at a time
+// only works on sorted arrays
+
+// divide and conquer
+
+// split the array in two pieces, pick a pivot point. then check each side to see which half it'd be
+
+let array2 = [1,3,4,6,8,9,11,12,15,16,17,18,19];
+
+// binary search pseudocode
+
+// this function accepts a sorted array and a value
+// create a left pointer at the start of the array and a right pointer at the end of the array
+//  while the left pointer comes before the right pointer:
+// create a pointer in the middle
+// if you find the value you want, return the index
+// if the value is too small, move the left pointer up
+// if the value is too large, move the right point down
+// if you never find the value, return -1
+
+function binarySearch(array, value){
+    let leftPointer = 0;
+    let rightPointer = array.length - 1;
+    while (leftPointer < rightPointer){
+        let middlePointer = Math.round((leftPointer + rightPointer) / 2);
+        if(array[middlePointer] === value){
+            return middlePointer;
+        } else if (array[middlePointer] < value){
+            leftPointer = middlePointer;
+        } else if(array[middlePointer] > value){
+            rightPointer = middlePointer;
+        }
+    }
+    return - 1
+}
+
+console.log(binarySearch(array2,16))
