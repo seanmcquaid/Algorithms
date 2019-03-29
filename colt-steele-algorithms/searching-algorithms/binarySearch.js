@@ -21,3 +21,8 @@ function binarySearch(arr,elem){
 }
 
 console.log(binarySearch([2,5,6,9,13,15,28,30], 28))
+
+// worst and avg case - O(log n)
+// best - O(1)
+
+// 16 elements - 4 steps
