@@ -29,6 +29,7 @@ function collectOddValues(arr){
             result.push(helperInput[0])
         }
         console.log(helperInput)
+        
         helper(helperInput.slice(1))
     }
 
