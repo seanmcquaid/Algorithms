@@ -103,5 +103,7 @@ function bubbleSort(arr){
     return arr
 }
 
+// time complexity is generaly O(n ^2)
+// if data is nearly sorted - it's more like linear time
 
 console.log(bubbleSort([37,45,29,8]))
