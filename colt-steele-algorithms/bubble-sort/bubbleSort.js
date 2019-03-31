@@ -48,14 +48,32 @@
 // this way the code runs less comparisons! if you start from the end, the window gets smaller
 
 
+// function bubbleSort(arr){
+//     for(let i = arr.length; i > 0; i--){
+//         for(let j = 0; j < i - 1; j++){
+//             if(arr[j] > arr[j+1]){
+//                 // swap
+//                 let temp = arr[j];
+//                 arr[j] = arr[j+1];
+//                 arr[j+1] = temp;
+//             }
+//         }
+//     }
+//     return arr
+// }
+
+
+// solution using updated swap from ES6
+
 function bubbleSort(arr){
+    const swap = (arr,idx1,idx2) => {
+        [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]
+    }
+
     for(let i = arr.length; i > 0; i--){
-        for(let j = 0; j < i - 1; j++){
+        for(let j = 0; j< arr.length; j++){
             if(arr[j] > arr[j+1]){
-                // swap
-                let temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
+                swap(arr,j, j+1)
             }
         }
     }
