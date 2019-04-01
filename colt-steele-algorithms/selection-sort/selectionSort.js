@@ -39,3 +39,6 @@ function selectionSort(arr){
 let array = [34,22,10,19,17]
 
 console.log(selectionSort(array));
+
+// time complexity : O(n^2)
+// if you want to minimize number of swaps, this is a good solution
