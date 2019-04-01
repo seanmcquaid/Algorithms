@@ -41,6 +41,21 @@ function mergeSort(arr){
     return merge(left, right)
 }
 
+// left side from first merge sort = [10,24]
+// mergeSort(10,24)
+// mergeSort(10)  - return [10]         mergeSort(24)  -return [24]
+// left = [10]                           right = [24]
+// merge([10],[24]) - returns [10,24]
+
+// right side from first merge sort = [73,76]
+// mergeSort(76,73)
+// mergeSort(76) - return [76]           mergeSort(73) - return [73]
+// left = [76]                           right = [73]
+// merge([76], [73]) - returns [73,76]
+
+// now merge for the first bc both left and right return something
+// merge([10,24], [73,76])
+
 let array = [10,24,76,73]
 
 console.log(mergeSort(array))
