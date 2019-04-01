@@ -33,6 +33,7 @@ function selectionSort(arr){
             swap(arr,i,lowest)
         }
     }
+    return arr
 }
 
 let array = [34,22,10,19,17]
