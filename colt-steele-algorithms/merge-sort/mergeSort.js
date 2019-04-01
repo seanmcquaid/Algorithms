@@ -59,3 +59,7 @@ function mergeSort(arr){
 let array = [10,24,76,73]
 
 console.log(mergeSort(array))
+
+// big o of merge sort
+// best, avg and worst - O(n log n )
+// space complexity - O(n)
