@@ -34,3 +34,6 @@ function quickSort(arr,left = 0, right = arr.length - 1){
 }
 
 console.log(quickSort([4,6,9,1,2,5,3]))
+
+// best / avg - O(N log n)
+// worst - O(n^2)
