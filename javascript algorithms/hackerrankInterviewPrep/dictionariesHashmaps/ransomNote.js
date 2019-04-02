@@ -1,34 +1,28 @@
 let magazine = ["ive", "got", "a", "lovely", "bunch", "of", "coconuts"]
-let note = ["ive", "got", "some", "coconuts"]
+let note = ["Ive", "got", "coconuts"]
 
 function checkMagazine(magazine, note) {
-    let magazineMap = new Map();
-    let noteMap = new Map();
-    let count = 0;
+    let magazineCount = {};
     for(let i = 0; i < magazine.length; i++){
-        magazineMap.set(magazine[i], 1)
+        let word = magazine[i];
+        magazineCount[word] = (magazineCount[word] || 0) + 1;
     }
+    let noteCount = {};
     for(let i = 0; i < note.length; i++){
-        noteMap.set(note[i], 1)
+        let word = note[i];
+        noteCount[word] = (noteCount[word] || 0) + 1;
     }
-    
-    for(let key of noteMap.keys()){
-        let noteWord = noteMap.get(key)
-        let regexCheck = new RegExp (noteWord)
-        for(let key2 of magazineMap.keys()){
-            let magWord = (magazineMap.get(key2))
-            if(regexCheck.test(magWord) == true){
-                count++;
-                magazineMap.delete(key2);
-                noteMap.delete(key)
-            }
+    let stringCount = 0;
+    for(let keys in noteCount){
+        if(magazineCount[keys] >= noteCount[keys]){
+            stringCount++;
         }
     }
-    if(count === note.length){
-        return("Yes");
+    if(stringCount === note.length){
+        return "Yes"
     } else {
-        return("No");
+        return "No"
     }
 }
 
-checkMagazine(magazine,note)
+console.log(checkMagazine(magazine,note))
