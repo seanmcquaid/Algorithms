@@ -51,3 +51,6 @@ function radixSort(nums){
 }
 
 console.log(radixSort([23,245,34444,64434,2]))
+
+// big o
+// best, avg, worst - O(nk)
