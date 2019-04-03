@@ -28,3 +28,4 @@ let firstStudent = new Student("Sean", "McQuaid", 20)
 
 console.log(firstStudent)
 console.log(firstStudent.grade)
+
