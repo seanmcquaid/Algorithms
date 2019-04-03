@@ -1,28 +1,20 @@
 let array = [4,3,1,2]
 
 function minimumSwaps(arr) {
-    let moveCount = 0;
-    let unsorted = true;
-
-    while(unsorted){
-        let unsortedArray = arr;
-        let sortedArray = arr.slice().sort();
-        for(let i = 0; i < unsortedArray.length;i++){
-            for(let j = 0; j < sortedArray.length;j++){
-                if(unsortedArray[i] === sortedArray[j]){
-                    let first = unsortedArray[i];
-                    let second = unsortedArray[j];
-                    unsortedArray[i] = second;
-                    unsortedArray[j] = first
-                    moveCount++;
-                }
+    swap = (arr,index1, index2)=>{
+        [arr[index1], arr[index2]] = [arr[index2], arr[index1]]
+    }
+    for (let i = 0; i < arr.length; i++){
+        let lowestValue = Infinity;
+        for(let j = 1; j < arr.length; j++){
+            if(arr[i] < lowestValue){
+                lowestValue = arr[i];
             }
         }
-        if(unsortedArray == sortedArray){
-            unsorted = false
-        }
+        console.log(i)
+        console.log(swap(arr, i, lowestValue))
     }
-    console.log(moveCount);
+    console.log(arr)
 }
 
 minimumSwaps(array);
