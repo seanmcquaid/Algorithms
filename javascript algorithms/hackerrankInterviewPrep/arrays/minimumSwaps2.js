@@ -1,4 +1,4 @@
-let array = [4,3,1,2]
+let array = [4,3,1,2,0]
 
 function minimumSwaps(arr) {
     let swapCount = 0;
@@ -27,3 +27,5 @@ function minimumSwaps(arr) {
 }
 
 console.log(minimumSwaps(array));
+
+// found out that the solution will time out regardless for 8 - 13 on hacker rank
