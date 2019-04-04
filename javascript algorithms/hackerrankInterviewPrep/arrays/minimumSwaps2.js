@@ -1,20 +1,29 @@
 let array = [4,3,1,2]
 
 function minimumSwaps(arr) {
-    swap = (arr,index1, index2)=>{
+    let swapCount = 0;
+    let swap = (arr,index1, index2)=>{
         [arr[index1], arr[index2]] = [arr[index2], arr[index1]]
     }
     for (let i = 0; i < arr.length; i++){
-        let lowestValue = Infinity;
-        for(let j = 1; j < arr.length; j++){
-            if(arr[i] < lowestValue){
-                lowestValue = arr[i];
+        let swapIndex;
+        let lowestNum = Infinity;
+        for(let j = i + 1; j < arr.length; j++){
+            if(arr[j] <= arr[i] && arr[j] < lowestNum){
+                lowestNum = arr[j];
+                swapIndex = j;
+                
+            }
+            if(j === arr.length-1){
+                if(swapIndex !== i){
+                    swap(arr, swapIndex, i)
+                    swapCount++;
+                }
+                
             }
         }
-        console.log(i)
-        console.log(swap(arr, i, lowestValue))
     }
-    console.log(arr)
+    return swapCount
 }
 
-minimumSwaps(array);
+console.log(minimumSwaps(array));
