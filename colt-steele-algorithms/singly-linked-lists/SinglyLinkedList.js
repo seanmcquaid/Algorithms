@@ -36,14 +36,17 @@ class SinglyLinkedList{
         this.length++;
         return this;
     }
+    pop(){
+
+    }
 }
 
 let list = new SinglyLinkedList
 list.push("Hello")
 list.push("Goodbye")
-console.log(list.head)
-console.log(list.head.next)
+list.push("!")
 
+list.traverse()
 // Pushing 
 // add a new to the end of the list
 
@@ -53,3 +56,14 @@ console.log(list.head.next)
 // otherwise set the next property on the tail to be the new node and set the tail property on the
 // list to be the newly created node
 // increment the length by one
+
+// Popping
+// removing a node from the end of the linked list
+
+// pseudocode
+// if there are nodes in the list, return undefined
+// loop through the entire list until you reach the tail
+// set the next property of the 2nd to last node to be null
+// set the tail to be the 2nd to last node
+// subtract 1 from the length
+// return the value of the node removed
