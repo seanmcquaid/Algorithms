@@ -37,7 +37,25 @@ class SinglyLinkedList{
         return this;
     }
     pop(){
-
+        if(this.length === 0){
+            return undefined
+        }
+        let current = this.head;
+        let newTail = current;
+        while(current.next){
+            newTail = current;
+            current = current.next;
+        }
+        this.tail = newTail;
+        this.tail.next = null;
+        this.length--;
+        if(this.length === 0){
+            this.head = null;
+            this.tail = null;
+        }
+        // console.log(current.val)
+        // console.log(newTail)
+        return current
     }
 }
 
@@ -45,8 +63,9 @@ let list = new SinglyLinkedList
 list.push("Hello")
 list.push("Goodbye")
 list.push("!")
+console.log(list.pop())
 
-list.traverse()
+// list.traverse()
 // Pushing 
 // add a new to the end of the list
 
