@@ -115,10 +115,12 @@ class SinglyLinkedList{
             return false
         }
         if(index === this.length){
-            return this.push(val);
+            this.push(val);
+            return true;
         }
         if(index === 0){
-            return this.unshift(val)
+            this.unshift(val);
+            return true;
         }
         let newNode = new Node(val);
         let previous = this.get(index - 1);
@@ -138,8 +140,9 @@ list.push("!")
 // console.log(list.shift())
 // console.log(list.unshift("stuff"))
 // console.log(list.get(0))
-list.set(0,"yogurt")
-console.log(list.get(0))
+// list.set(0,"yogurt")
+// console.log(list.get(0))
+list.insert(1,38)
 
 // list.traverse()
 // Pushing 
