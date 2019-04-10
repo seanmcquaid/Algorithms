@@ -81,6 +81,19 @@ class SinglyLinkedList{
         this.length++;
         return this
     }
+
+    get(index){
+        if(index < 0 || index >= this.length){
+            return undefined
+        }
+        let count = 0;
+        let current = this.head;
+        while(count !== index){
+            current = current.next;
+            count++;
+        }
+        return current
+    }
 }
 
 let list = new SinglyLinkedList
@@ -89,7 +102,8 @@ list.push("Goodbye")
 list.push("!")
 // console.log(list.pop())
 // console.log(list.shift())
-console.log(list.unshift("stuff"))
+// console.log(list.unshift("stuff"))
+console.log(list.get(0))
 
 // list.traverse()
 // Pushing 
@@ -135,3 +149,12 @@ console.log(list.unshift("stuff"))
 // set the head property on the list to be that newly created node
 // increment the length by 1 
 // return the linked list
+
+// Get 
+
+// retrieving a node by it's position in the linked list
+
+// pseudocode
+// function should accept an index
+// if the index is less than zero or greater than or equal to the length of the list, return null
+// loop through the list until you reach the index and return the node at that specific index;
