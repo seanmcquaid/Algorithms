@@ -23,23 +23,26 @@ class SinglyLinkedList{
         this.length = 0;
         this.head = null;
         this.tail = null;
-        this.push = this.push.bind(this)
     }
     push(val){
         let newNode = new Node(val);
-        if(this.head === null){
+        if(!this.head){
             this.head = newNode;
-            this.tail = newNode;
+            this.tail = this.head;
         } else {
+            this.tail.next = newNode; 
             this.tail = newNode;
-            this.length++
         }
+        this.length++;
+        return this;
     }
 }
 
 let list = new SinglyLinkedList
 list.push("Hello")
 list.push("Goodbye")
+console.log(list.head)
+console.log(list.head.next)
 
 // Pushing 
 // add a new to the end of the list
