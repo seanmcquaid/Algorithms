@@ -147,6 +147,21 @@ class SinglyLinkedList{
         this.length--;
         return removed
     }
+
+    reverse(){
+        let current = this.head;
+        this.head = this.tail;
+        this.tail = current;
+        let previous = null;
+        let next;
+        for(let i = 0; i < this.length; i++){
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        return this
+    }
 }
 
 let list = new SinglyLinkedList
@@ -159,7 +174,8 @@ list.push("!")
 // console.log(list.get(0))
 // list.set(0,"yogurt")
 // console.log(list.get(0))
-list.insert(1,38)
+// list.insert(1,38)
+console.log(list.reverse())
 
 // list.traverse()
 // Pushing 
@@ -253,3 +269,19 @@ list.insert(1,38)
 // set the next prop in that node to be the next of the next node
 // decrement the length
 // return the value of the node removed
+
+// reverse
+
+// reversing the linked list in place!
+
+// pseudocode
+
+// swap the head and tail
+// create a var called next
+// created a var called prev
+// create a variable called node or current and initialize to start the head
+// loop through the list
+// set the next property on whatever the current node is
+// set the next property on whatever the pre is 
+// set prev to be val of node var
+// srt the node var to be the value of the next var
