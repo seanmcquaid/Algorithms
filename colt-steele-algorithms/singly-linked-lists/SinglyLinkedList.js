@@ -179,3 +179,18 @@ console.log(list.get(0))
 // use your get function to find the specific node
 // if node is not found, return false
 // if node is found, set the value of that node to be the value passed to the functiuon and return true;
+
+// Insert
+
+// adding a node to the linked list at a specific position
+
+// pseudocode
+// function takes index and value
+// if the index is less than zero or grater than the length, return false
+// if the index is the same as the length, push a node to the end of the list
+// if the index is 0, use unshift
+// otherwise, use the get method, access the node at the index - 1
+// set the next property on that node to be the new node
+// set the next property of the new node to the old next old
+// increment the length
+// return true
