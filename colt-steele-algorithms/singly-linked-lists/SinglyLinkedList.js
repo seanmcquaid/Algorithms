@@ -285,3 +285,16 @@ console.log(list.reverse())
 // set the next property on whatever the pre is 
 // set prev to be val of node var
 // srt the node var to be the value of the next var
+
+// Big O of Singly Linked Lists
+// insertion - O(1)
+// Removal - It depends.... O(1) or O(N)
+// Searching - O(N)
+// Access - O(N)
+
+// recape
+
+// SLL are an excellent alt to arrays when insertion and deeletion at the beginning are freq required
+// arrays contian a built in index whereas linked lists do not
+
+// the idea of a list DS that consists of nodes is the foundation for other data structures
