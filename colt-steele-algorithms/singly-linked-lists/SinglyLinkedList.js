@@ -69,6 +69,18 @@ class SinglyLinkedList{
         }
         return currentHead;
     }
+    unshift(val){
+        let newNode = new Node(val)
+        if(!this.head){
+            this.head = newNode;
+            this.tail = this.head;
+        } else {
+            newNode.next = this.head;
+            this.head = newNode;
+        }
+        this.length++;
+        return this
+    }
 }
 
 let list = new SinglyLinkedList
@@ -76,7 +88,8 @@ list.push("Hello")
 list.push("Goodbye")
 list.push("!")
 // console.log(list.pop())
-console.log(list.shift())
+// console.log(list.shift())
+console.log(list.unshift("stuff"))
 
 // list.traverse()
 // Pushing 
@@ -110,3 +123,15 @@ console.log(list.shift())
 // set the head property to be the current head's next property
 // decrement the length by 1 
 // return the value of the node removed
+
+// unshifting
+
+// adding a new node to the beginning of the linked list
+
+// functions accepts a value
+// create a new node using the value passed to the function;
+// if there is no head property on the list, set the head and tail to be the newly created node
+// otherwise set the newly created node's next property to be the current head property on the list
+// set the head property on the list to be that newly created node
+// increment the length by 1 
+// return the linked list
