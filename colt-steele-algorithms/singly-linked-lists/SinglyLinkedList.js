@@ -130,6 +130,23 @@ class SinglyLinkedList{
         this.length++;
         return true
     }
+
+    remove(index){
+        if(index < 0 || index >= this.length){
+            return undefined
+        }
+        if(index === 0){
+            return this.shift();
+        }
+        if(index === this.length-1){
+            return this.pop()
+        }
+        let previousNode = this.get(index-1);
+        let removed = previousNode.next;
+        previousNode.next = removed.next;
+        this.length--;
+        return removed
+    }
 }
 
 let list = new SinglyLinkedList
@@ -222,3 +239,17 @@ list.insert(1,38)
 // set the next property of the new node to the old next old
 // increment the length
 // return true
+
+// remove 
+
+// removing a node from the linked list at a specific position
+
+// pseudocode 
+
+// if the index is less than zero or greater than or equal length, return undefined
+// if the index is the same as the length-1 - pop
+// if the index is 0, shift
+// otherwise, use get method to access the node at index -1 
+// set the next prop in that node to be the next of the next node
+// decrement the length
+// return the value of the node removed
