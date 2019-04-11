@@ -6,7 +6,6 @@ function gradingStudents(grades) {
             let gradeSplit = grades[i].toString().split("")
             let firstDigit = parseInt(gradeSplit[0]);
             let secondDigit = parseInt(gradeSplit[1]);
-            // check diff from multiple of 5 and make sure it is less than 3 - if so, round up
             if(secondDigit <= 5){
                 if(5 - secondDigit < 3){
                     let roundedNumber = (firstDigit * 10) + 5
@@ -16,8 +15,8 @@ function gradingStudents(grades) {
                 }
             }else{
                 if(10 - secondDigit < 3){
-                    let roundedNumber = (firstDigit + 1) * 10
-                    console.log(roundedNumber)
+                    let roundedNumber2 = (firstDigit + 1) * 10
+                    console.log(roundedNumber2)
                 }else{
                     console.log(grades[i])
                 }
