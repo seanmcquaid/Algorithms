@@ -14,4 +14,4 @@ function staircase(n){
     }
 }
 
-staircase(4)
+staircase(40)
