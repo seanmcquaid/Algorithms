@@ -60,44 +60,52 @@ class DoublyLinkedList{
         this.length--;
         return oldHead;
     }
+
+    unshift(val){
+        const newNode = new Node(val);
+        if(this.length === 0){
+            this.head = newNode;
+            this.tail = newNode;
+        }else{
+            this.head.prev = newNode;
+            newNode.next = this.head;
+            this.head = newNode;
+        }
+        this.length++;
+        return this;
+    }
+
+    get(index){
+        if(index < 0 || index >= this.length){
+            return null;
+        }
+        let count, current;
+        if(index <= this.length / 2){
+            count = 0;
+            current = this.head;
+            while(count !== index){
+                current = current.next;
+                count++;
+            }
+            return current;
+        }else {
+            count = this.length - 1;
+            current = this.tail;
+            while(count !== index){
+                current = current.prev;
+                count--;
+            }
+        }
+        return current;
+    }
     
 }
 
 const list = new DoublyLinkedList();
 
-// push
-// add a node to the END of the Doubly Linked List
-// create a new node with the value passed to the function
-// if the head property is null, set the head and tail to the newly created node
-// if not, set the next property on the tail to be that node
-// set the previous property on the newly created node to be the tail
-// set the tail to be the newly created node
-// increment the length
-// return the doubly linked list
-
 list.push(99);
 list.push(100);
 
-// pop
-
-// remove a node from the end of the doubly linked list
-// if there is no head/tail - return undefined
-// store the current tail in a variable to return later
-// if length is 1, set the head and tail to null
-// update the tail to be the previous Node
-// set the new tails next to be null
-// decrement the length
-// return the value removed
-
-// console.log(list.pop());
-
-// shifting 
-// removes a node from the beginning of the beginning of a Doubly Linked List
-// if length is 0 - return undefined
-// store the current head property in a variable
-// if length is one  - set head and tail to be nail
-// update the head to be the next of the old head
-// update the new head prev to be null
-// decrement the length
-
 console.log(list.shift());
+
+console.log(list.unshift(69));
