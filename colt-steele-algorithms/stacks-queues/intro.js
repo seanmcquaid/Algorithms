@@ -11,3 +11,15 @@
 // undo / redo functionality
 // Routing the history is treated like a stack (Think React)
 // Algorithms
+
+// QUEUE
+
+// A FIFO Data structure
+// First in First Out
+
+// waiting in line 
+
+// Used  : 
+// Background Tasks
+// Uploading Resources
+// printing/ task processing
