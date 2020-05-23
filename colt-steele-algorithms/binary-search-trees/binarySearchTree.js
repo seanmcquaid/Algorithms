@@ -22,7 +22,7 @@ class BinarySearchTree{
                 if(newNode.value === current.value){
                     return undefined;
                 }
-                
+
                 if(newNode.value < current.value){
                     if(current.left === null){
                         current.left = newNode;
@@ -40,6 +40,27 @@ class BinarySearchTree{
                 }
             }
         }
+    }
+
+    find(value){
+        if(this.root === null){
+            return false;
+        }
+        let current = this.root;
+        let found = false;
+        while(!found && current){
+            if(value < current.value){
+                current = current.left;
+            } else if(value > current.value){
+                current = current.right;
+            } else {
+                found = true;
+            }
+        }
+        if(!found){
+            return undefined;
+        }
+        return current;
     }
 
 }
